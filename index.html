@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
+    <title>舆情分析系统</title>
+    <link rel="stylesheet" href="http://js.arcgis.com/3.13/esri/css/esri.css">
+    <style>
+        html,body,#basemap{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script src="http://js.arcgis.com/3.13/"></script>
+    <script>
+        var map;
+        require(["esri/map", "dojo/domReady!"],function(Map){
+            map = new Map("basemap", {
+                basemap : "topo",
+                center : [103.67, 36],
+                zoom : 7
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="basemap"></div>
+</body>
+</html>
